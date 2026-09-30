@@ -11,17 +11,24 @@ int hitungHargaPerKg(String kategori) {
   return 0;
 }
 
+// Menghitung nilai sampah berdasarkan kategori dan berat
 int hitungNilaiSampah(String kategori, int berat) {
   int harga = hitungHargaPerKg(kategori);
 
   return harga * berat;
 }
 
+// Menambahkan nilai sampah ke saldo
+int tambahSaldo(int saldo, int nilaiSampah) {
+  return saldo + nilaiSampah;
+}
+
 void main() {
-  print(hitungHargaPerKg("plastik"));
-  print(hitungHargaPerKg("kertas"));
-  print(hitungHargaPerKg("logam"));
-  print(hitungNilaiSampah("plastik", 10));
-  print(hitungNilaiSampah("kertas", 10));
-  print(hitungNilaiSampah("logam", 10));
+  int saldo = 0;
+
+  int nilaiSampah = hitungNilaiSampah("plastik", 2);
+
+  saldo = tambahSaldo(saldo, nilaiSampah);
+
+  print("Saldo: Rp$saldo");
 }
