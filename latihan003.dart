@@ -23,12 +23,24 @@ int tambahSaldo(int saldo, int nilaiSampah) {
   return saldo + nilaiSampah;
 }
 
+//
+int tarikSaldo(int saldo, int jumlah) {
+  // BR-02 Menentukan apakah jumlah Minimal tarik Rp10.000
+  if (jumlah < 10000) {
+    return saldo;
+  }
+
+  if (jumlah > saldo) {
+    return saldo;
+  }
+
+  return saldo - jumlah;
+}
+
 void main() {
-  int saldo = 0;
+  int saldo = 50000;
 
-  int nilaiSampah = hitungNilaiSampah("plastik", 2);
-
-  saldo = tambahSaldo(saldo, nilaiSampah);
+  saldo = tarikSaldo(saldo, 20000);
 
   print("Saldo: Rp$saldo");
 }
