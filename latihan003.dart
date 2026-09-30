@@ -11,8 +11,17 @@ int hitungHargaPerKg(String kategori) {
   return 0;
 }
 
+int hitungNilaiSampah(String kategori, int berat) {
+  int harga = hitungHargaPerKg(kategori);
+
+  return harga * berat;
+}
+
 void main() {
   print(hitungHargaPerKg("plastik"));
   print(hitungHargaPerKg("kertas"));
   print(hitungHargaPerKg("logam"));
+  print(hitungNilaiSampah("plastik", 10));
+  print(hitungNilaiSampah("kertas", 10));
+  print(hitungNilaiSampah("logam", 10));
 }
