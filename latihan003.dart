@@ -12,6 +12,8 @@ int hitungHargaPerKg(String kategori) {
     return 7000;
   }
 
+  // BR-05
+  // Kategori selain plastik, kertas, dan logam tidak diterima
   return 0;
 }
 
@@ -150,5 +152,19 @@ void main() {
   print("Saldo setelah penarikan: Rp$saldo");
   print("Setor: 0 kg plastik");
   print("Nilai sampah: Rp$nilaiSampah");
+
+  // Skenario 7
+  // BR-05: Menguji kategori sampah yang tidak diterima
+
+  saldo = 0;
+
+  nilaiSampah = hitungNilaiSampah("kayu", 2);
+
+  saldo = tambahSaldo(saldo, nilaiSampah);
+
+  print("Skenario 7");
+  print("Setor: 2 kg kayu");
+  print("Nilai sampah: Rp$nilaiSampah");
+  print("Saldo: Rp$saldo");
 }
 
