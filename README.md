@@ -1,19 +1,6 @@
 # BANK SAMPAH
 Deny Dermawan - 1124160250
 
-## Fitur
-
-Program memiliki beberapa fungsi utama:
-
-* Menentukan harga sampah berdasarkan kategori.
-* Menghitung nilai sampah berdasarkan berat.
-* Menambahkan hasil setor ke saldo.
-* Melakukan penarikan saldo.
-* Validasi minimum penarikan.
-* Validasi agar saldo tidak menjadi minus.
-* Validasi berat sampah.
-* Validasi kategori sampah.
-
 ## Business Rules
 
 * **BR-01:** Harga sampah per kg berbeda berdasarkan kategori plastik, kertas, dan logam.
