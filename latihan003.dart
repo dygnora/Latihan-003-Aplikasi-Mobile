@@ -128,4 +128,16 @@ void main() {
   print("Saldo awal: Rp50000");
   print("Penarikan: Rp5000");
   print("Saldo akhir: Rp$saldo");
+
+  // Skenario 6
+  // BR-03: Menguji penarikan lebih besar dari saldo
+  // Penarikan Rp30.000 tidak diperbolehkan karena saldo hanya Rp20.000
+  saldo = 20000;
+  saldo = tarikSaldo(saldo, 30000);
+
+  print("Skenario 6");
+  print("Saldo awal: Rp20000");
+  print("Penarikan: Rp30000");
+  print("Saldo akhir: Rp$saldo");
 }
+
